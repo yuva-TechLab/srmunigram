@@ -1,0 +1,168 @@
+/* ------------------ CreatePost Component ------------------ */
+.create-post {
+  width: 100%;
+  max-width: 480px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.create-post h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #111;
+  margin: 0;
+}
+
+.create-post input[type="file"] {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+.create-post textarea {
+  width: 100%;
+  padding: 12px 10px;      /* comfortable padding */
+  font-size: 14px;         /* readable font */
+  line-height: 1.5;        /* spacing between lines */
+  resize: none;            /* disable manual resizing for cleaner look */
+  border-radius: 10px;     /* rounded corners */
+  border: 1px solid #ddd;  /* light subtle border */
+  background-color: #fafafa; /* soft background */
+  color: #111;  
+  font-family: 'sf';           /* text color */
+  min-height: 80px;        /* enough space for caption */
+  box-sizing: border-box;  /* ensures padding doesn’t break width */
+}
+
+.create-post textarea:focus {
+  outline: none;
+  border-color: #034ea2;   /* highlight border on focus */
+  box-shadow: 0 0 5px rgba(0, 78, 162, 0.3); /* subtle glow */
+}
+
+.create-post button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-post button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.create-post button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ------------------ UniPost Modal Overlay ------------------ */
+.uni-post-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 15px;
+}
+
+/* ------------------ UniPost Modal Content ------------------ */
+.uni-post-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 480px;
+  padding: 25px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  animation: popIn 0.2s ease-out forwards;
+}
+
+/* Close button at top-right */
+.uni-post-content .close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+}
+
+.uni-post-content .close-btn:hover {
+  color: #000;
+}
+
+/* Ensure CreatePost inside modal fits perfectly */
+.uni-post-content .create-post {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Smooth pop-in animation for modal */
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .create-post {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .uni-post-content {
+    padding: 20px 15px 15px 15px;
+    border-radius: 16px;
+  }
+}

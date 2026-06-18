@@ -1,0 +1,140 @@
+/* --------- Page Container --------- */
+.edit-profile-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0px 0px;
+  font-family: 'sf';
+  background: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-top: -30px;
+  margin-bottom: -38px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -------- Profile Picture Section -------- */
+.profile-picture-section {
+  display: flex;
+   margin-bottom: -24px;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+}
+
+@media(min-width: 768px) {
+  .edit-profile-container {
+    margin-left: auto;
+    margin-right: auto;
+    } }
+
+/* The profile image preview */
+.profile-picture-preview {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* File input (make it minimal like Instagram) */
+.profile-picture-section input[type="file"] {
+  font-size: 11px;
+  color: #0095f6;
+  border: none;
+  margin-bottom: -20px;
+  margin-left: -10px;
+  background: none;
+  cursor: pointer;
+}
+
+/* Remove Photo button */
+.profile-picture-section button {
+  background: none;
+  border: none;
+  color: #ed4956; /* Instagram red */
+  font-size: 13px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+/* --------- Form --------- */
+.edit-profile-form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-profile-form label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.edit-profile-form input,
+.edit-profile-form textarea {
+  width: 93%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  outline: none;
+  background: #fafafa;
+  transition: border-color 0.2s;
+}
+
+.edit-profile-form input:focus,
+.edit-profile-form textarea:focus {
+  border-color: #a8a8a8;
+  background: #fff;
+}
+
+.edit-profile-form textarea {
+  resize: none;
+  min-height: 70px;
+}
+
+/* --------- Save Button --------- */
+.edit-profile-form button {
+  background-color: #0095f6;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.edit-profile-form button:active {
+  background-color: #007ac6;
+}
+
+.edit-profile-form button:disabled {
+  background-color: #b2dffc;
+  cursor: not-allowed;
+}
+
+/* --------- Mobile --------- */
+@media (max-width: 480px) {
+  .edit-profile-container {
+    padding: 15px 12px;
+  }
+
+  .edit-profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .edit-profile-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

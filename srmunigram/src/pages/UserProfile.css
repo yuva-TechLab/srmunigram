@@ -1,0 +1,183 @@
+/* ---------- General User Profile ---------- */
+.user-profile {
+  max-width: 405px;
+  margin: 0 auto;
+  font-family: 'sfm';
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: -8px;
+}
+@media(min-width: 768px) {
+  .user-profile {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.verified-badge {
+  width: 25px;
+  height: 25px;
+  margin-top: -1px;
+  margin-left: -2px;
+  vertical-align: middle;
+}
+/* ---------- Profile Header ---------- */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 25px;
+  border-bottom: 0px solid #eaeaea;
+  position: relative;
+}
+
+/* Top row: profile picture + name + edit button */
+.profile-header-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-info h2 {
+  margin: 0;
+  font-size: 22px;
+  font-family: 'sfb';
+}
+
+.user-handle {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 5px;
+  margin-top: -18px;
+}
+
+/* Edit Profile Button */
+.edit-profile-button {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-profile-button:hover {
+  background: #f0f0f0;
+}
+
+/* Profile fields: Department, Pronoun, Bio, Links */
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+  gap: 4px;
+}
+
+.profile-field {
+  font-size: 14px;
+  line-height: 1.3;
+  
+}
+
+.profile-field a {
+  color: #0073b1; /* LinkedIn link color */
+  text-decoration: none;
+}
+
+.profile-field a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- User Posts ---------- */
+.profile-posts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  
+}
+
+/* ---------- Footer ---------- */
+.feed-footer {
+  position: sticky;
+  bottom: 0;
+  font-size: 20px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 15px;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-icon {
+  cursor: pointer;
+}
+
+/* ---------- Post Menu Overlay ---------- */
+.post-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Post menu box */
+.post-menu {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 200px;
+}
+
+.post-menu button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.post-menu button:hover {
+  background: #f0f0f0;
+}
+
+/* Close button */
+.close-btn {
+  align-self: flex-end;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+

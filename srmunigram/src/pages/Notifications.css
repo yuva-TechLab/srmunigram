@@ -1,0 +1,108 @@
+/* ---------- Notifications Page ---------- */
+.notifications-page {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 0 15px;
+  font-family: 'sf';
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Page Title */
+.notifications-page h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0 10px 0;
+  color: #111;
+}
+
+/* Notifications List */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Each Notification Item */
+.notification-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  transition: background 0.2s, transform 0.1s;
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-1px);
+}
+
+/* Unread Notification */
+.notification-item.unread {
+  font-weight: 500;
+  border-left: 4px solid #034ea2; /* Instagram-style blue */
+  background-color: #f0f8ff;
+}
+
+/* Notification Text */
+.notification-item span {
+  color: #111;
+}
+
+.notification-item small.timestamp {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* Back Button */
+.notifications-page button {
+  margin: 20px auto;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #034ea2;
+  color: #fff;
+  font-size: 14px;
+  font-family:'sf';
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.notifications-page button:hover {
+  background-color: #034ea2;
+}
+
+/* Close Button (Top Right) */
+.notifications-page .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+  transition: color 0.2s;
+}
+
+.notifications-page .close-btn:hover {
+  color: #3897f0;
+}
+
+.loading-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* placeholder height */
+  color: gray;
+  font-size: 14px;
+}
+

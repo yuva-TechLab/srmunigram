@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'sf';
+  src: url('../fonts/sf.OTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'sfm';
+  src: url('../fonts/sf-medium.OTF') format('truetype');
+}
+
+.post {
+  display:flex;
+  flex-direction:column;
+  margin: -10px auto; /* centers horizontally */
+  background-color: #fff;
+  font-size: 14px;
+  width: 100%;        /* mobile: full width */
+  max-width: 400px;   /* laptop/desktop: restrict width */
+  padding: 0px -10px;
+  color: black;
+}
+
+/* Header */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 8px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  padding: 6px 6px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.username {
+  
+  font-family:'sfb';
+  margin-left: -5px;
+}
+
+.timestamp {
+  color: #888;
+  font-size: 12px;
+  font-family: 'sf';
+}
+
+.post-image img {
+  width: 102%;
+  height: 100%;         /* fill container */
+  object-fit: cover;    /* scales image nicely */
+}
+
+/* Caption */
+.post-caption {
+  padding: 0px 15px;
+  font-size: 14px;
+  color: black;
+  font-family: 'sf';
+  margin-bottom: -8px;
+}
+
+/* Actions */
+.post-actions {
+  display: flex;
+  justify-content:left;
+  padding: 0px px;
+  border-top: 0px solid #eee;
+  border-bottom: -10px solid #eee;
+}
+
+.post-actions button {
+  cursor: pointer;
+  border: none;
+  gap: 5px;
+  background: none;
+  font-size: 12px;
+}
+
+/* Comments */
+.post-comments {
+  padding: 5px 15px;
+}
+
+.comment {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-family: 'Arial';
+}
+
+.comment-input {
+  display: flex;
+  margin-top: 5px;
+}
+
+.comment-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 18px;
+  padding: 10px;
+}
+
+.comment-input button {
+  margin-left: 5px;
+  height: 45px;
+  width: 70px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  padding-left: 11px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #034ea2;
+  margin-top:0px;
+  transition: color 0.2s;
+}
+
+.heart:hover {
+  color: red;
+}
+
+.heart.liked {
+  color: red;
+}
+
+.comment:hover {
+  color: #c59b48;
+}
+
+.share:hover {
+  color: #c59b48;
+}
